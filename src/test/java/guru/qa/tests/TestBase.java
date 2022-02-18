@@ -25,6 +25,7 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
     }
 
+    // comment for pull request
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
