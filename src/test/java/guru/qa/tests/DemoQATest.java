@@ -27,7 +27,7 @@ public class DemoQATest extends TestBase {
         //открываем URL
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
-
+        //вводим данные в форму
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(userEmail);
