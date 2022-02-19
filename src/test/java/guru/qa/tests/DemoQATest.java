@@ -44,7 +44,7 @@ public class DemoQATest extends TestBase {
         $("#react-select-3-input").setValue(state).pressEnter();
         $("#react-select-4-input").setValue(city).pressEnter();
         $("#submit").click();
-
+        //проверяем введенные данные
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table tbody").shouldHave(text("Sergey Me"),
                 text("ya@ya.ru"),
