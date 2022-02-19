@@ -1,6 +1,5 @@
 package guru.qa.tests;
 
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -9,9 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class DemoQATest extends TestBase {
 
-
     @Test
-    @Tag("properties")
     public void fillForm() {
 
         String
@@ -27,7 +24,8 @@ public class DemoQATest extends TestBase {
                 state = "NCR",
                 city = "Noida";
 
-        open("");
+        //открываем URL
+        open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
 
         $("#firstName").setValue(firstName);
